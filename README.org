@@ -1,0 +1,46 @@
+#+TITLE: xref-relative-locations.el
+
+This package provides a global minor mode to make location filenames
+relative in Xref buffers.
+
+This can be useful if your source of Xref locations in a project (tags
+tables, shell commands, etc.) provides absolute location filenames only,
+and your project lives in a somewhat deeply nested directory structure:
+by hiding the base directory part of filenames, the remaining relative
+part becomes succinct and more meaningful in your current context.
+
+* Installation
+
+If you use MELPA, an easy way to install this package is via
+=package-install=. Alternatively, download =xref-relative-locations.el=,
+put it in your =load-path= and =require= it. Finally, use
+=(xref-relative-locations-mode 1)= or =M-x xref-relative-locations-mode=
+to turn on the provided minor mode.
+
+If you use both MELPA and =use-package=, you can use this, too:
+
+#+begin_src emacs-lisp
+(use-package xref-relative-locations
+  :ensure t
+  :config
+  (xref-relative-locations-mode 1))
+#+end_src
+
+* Screenshots
+
+With Xref relative locations turned on:
+
+[[screenshots/xref-relative-locations.png]]
+
+With absolute locations (Xref default):
+
+[[screenshots/xref-default.png]]
+
+* Notes
+
+Note that pre-existing Xref buffers are not affected by toggling the
+minor mode on or off.
+
+Also note that the Xref buffer content does not actually change as other
+functionality might rely on absolute paths: rather, the base directory
+part in location filenames is hidden using text overlays.
