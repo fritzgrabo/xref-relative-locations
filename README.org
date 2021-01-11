@@ -1,4 +1,8 @@
-#+TITLE: xref-relative-locations.el
+*UPDATE: This package is rendered obsolete in Emacs 28.1.*\\
+Set =xref-file-name-display= to =project-relative= to achieve the [[https://git.savannah.gnu.org/cgit/emacs.git/commit/etc/NEWS?id=13b59c690ada05f670d8056a6710045b22097c88][same
+effect]].
+
+* xref-relative-locations.el
 
 This package provides a global minor mode to make location filenames
 relative in Xref buffers.
