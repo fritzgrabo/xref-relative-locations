@@ -24,7 +24,7 @@ If you use both MELPA and =use-package=, you can use this, too:
 
 #+begin_src emacs-lisp
 (use-package xref-relative-locations
-  :ensure t
+  :ensure
   :config
   (xref-relative-locations-mode 1))
 #+end_src
